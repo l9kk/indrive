@@ -1,0 +1,364 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "name": "Айгуль Сарсенова",
+      "age": 28,
+      "current_location": {
+        "lat": 51.0845,
+        "lng": 71.4127,
+        "address": "Микрорайон Самал"
+      },
+      "destination": {
+        "lat": 51.0980,
+        "lng": 71.4118,
+        "address": "Центральный офис"
+      },
+      "trip_purpose": "работа",
+      "preferred_transport": "такси",
+      "estimated_duration": 15
+    },
+    {
+      "id": 2,
+      "name": "Максим Петров",
+      "age": 35,
+      "current_location": {
+        "lat": 51.0901,
+        "lng": 71.4209,
+        "address": "Жилой комплекс Алатау"
+      },
+      "destination": {
+        "lat": 51.0858,
+        "lng": 71.4306,
+        "address": "Торговый центр"
+      },
+      "trip_purpose": "покупки",
+      "preferred_transport": "личный автомобиль",
+      "estimated_duration": 20
+    },
+    {
+      "id": 3,
+      "name": "Гульнара Нурланова",
+      "age": 42,
+      "current_location": {
+        "lat": 51.0956,
+        "lng": 71.4259,
+        "address": "Центральный район"
+      },
+      "destination": {
+        "lat": 51.0788,
+        "lng": 71.4217,
+        "address": "Больница"
+      },
+      "trip_purpose": "медицина",
+      "preferred_transport": "такси",
+      "estimated_duration": 25
+    },
+    {
+      "id": 4,
+      "name": "Дмитрий Иванов",
+      "age": 24,
+      "current_location": {
+        "lat": 51.1005,
+        "lng": 71.4204,
+        "address": "Студенческий городок"
+      },
+      "destination": {
+        "lat": 51.0899,
+        "lng": 71.4094,
+        "address": "Университет"
+      },
+      "trip_purpose": "учеба",
+      "preferred_transport": "общественный транспорт",
+      "estimated_duration": 30
+    },
+    {
+      "id": 5,
+      "name": "Асель Касымова",
+      "age": 31,
+      "current_location": {
+        "lat": 51.0832,
+        "lng": 71.4029,
+        "address": "Спальный район"
+      },
+      "destination": {
+        "lat": 51.0990,
+        "lng": 71.4283,
+        "address": "Бизнес-центр"
+      },
+      "trip_purpose": "работа",
+      "preferred_transport": "такси",
+      "estimated_duration": 18
+    },
+    {
+      "id": 6,
+      "name": "Александр Ким",
+      "age": 29,
+      "current_location": {
+        "lat": 51.0893,
+        "lng": 71.4022,
+        "address": "Микрорайон Орбита"
+      },
+      "destination": {
+        "lat": 51.0847,
+        "lng": 71.4126,
+        "address": "Ресторан"
+      },
+      "trip_purpose": "развлечения",
+      "preferred_transport": "такси",
+      "estimated_duration": 12
+    },
+    {
+      "id": 7,
+      "name": "Жанар Абдуллаева",
+      "age": 37,
+      "current_location": {
+        "lat": 51.0854,
+        "lng": 71.4218,
+        "address": "Жилой массив"
+      },
+      "destination": {
+        "lat": 51.0941,
+        "lng": 71.4329,
+        "address": "Школа"
+      },
+      "trip_purpose": "семейные дела",
+      "preferred_transport": "личный автомобиль",
+      "estimated_duration": 22
+    },
+    {
+      "id": 8,
+      "name": "Роман Сидоров",
+      "age": 45,
+      "current_location": {
+        "lat": 51.0787,
+        "lng": 71.4162,
+        "address": "Южный район"
+      },
+      "destination": {
+        "lat": 51.0980,
+        "lng": 71.4060,
+        "address": "Аэропорт"
+      },
+      "trip_purpose": "командировка",
+      "preferred_transport": "такси",
+      "estimated_duration": 35
+    },
+    {
+      "id": 9,
+      "name": "Индира Мамбетова",
+      "age": 26,
+      "current_location": {
+        "lat": 51.0910,
+        "lng": 71.4256,
+        "address": "Новый микрорайон"
+      },
+      "destination": {
+        "lat": 51.0858,
+        "lng": 71.4306,
+        "address": "Фитнес-центр"
+      },
+      "trip_purpose": "спорт",
+      "preferred_transport": "такси",
+      "estimated_duration": 16
+    },
+    {
+      "id": 10,
+      "name": "Сергей Волков",
+      "age": 52,
+      "current_location": {
+        "lat": 51.1001,
+        "lng": 71.4283,
+        "address": "Элитный район"
+      },
+      "destination": {
+        "lat": 51.0845,
+        "lng": 71.4127,
+        "address": "Офисный центр"
+      },
+      "trip_purpose": "деловая встреча",
+      "preferred_transport": "личный автомобиль",
+      "estimated_duration": 19
+    },
+    {
+      "id": 11,
+      "name": "Алия Есенова",
+      "age": 33,
+      "current_location": {
+        "lat": 51.0876,
+        "lng": 71.4089,
+        "address": "Микрорайон Мамыр"
+      },
+      "destination": {
+        "lat": 51.0956,
+        "lng": 71.4192,
+        "address": "Детский сад"
+      },
+      "trip_purpose": "семейные дела",
+      "preferred_transport": "такси",
+      "estimated_duration": 14
+    },
+    {
+      "id": 12,
+      "name": "Евгений Козлов",
+      "age": 40,
+      "current_location": {
+        "lat": 51.0823,
+        "lng": 71.4154,
+        "address": "Промышленный район"
+      },
+      "destination": {
+        "lat": 51.0932,
+        "lng": 71.4027,
+        "address": "Склад"
+      },
+      "trip_purpose": "работа",
+      "preferred_transport": "служебный автомобиль",
+      "estimated_duration": 28
+    },
+    {
+      "id": 13,
+      "name": "Камила Турсынова",
+      "age": 23,
+      "current_location": {
+        "lat": 51.0967,
+        "lng": 71.4334,
+        "address": "Студенческое общежитие"
+      },
+      "destination": {
+        "lat": 51.0854,
+        "lng": 71.4184,
+        "address": "Кафе"
+      },
+      "trip_purpose": "встреча с друзьями",
+      "preferred_transport": "такси",
+      "estimated_duration": 13
+    },
+    {
+      "id": 14,
+      "name": "Андрей Смирнов",
+      "age": 38,
+      "current_location": {
+        "lat": 51.0789,
+        "lng": 71.4291,
+        "address": "Частный сектор"
+      },
+      "destination": {
+        "lat": 51.0901,
+        "lng": 71.4150,
+        "address": "Банк"
+      },
+      "trip_purpose": "финансовые вопросы",
+      "preferred_transport": "личный автомобиль",
+      "estimated_duration": 24
+    },
+    {
+      "id": 15,
+      "name": "Динара Ахметова",
+      "age": 29,
+      "current_location": {
+        "lat": 51.0934,
+        "lng": 71.4078,
+        "address": "Жилой комплекс Алмаз"
+      },
+      "destination": {
+        "lat": 51.0867,
+        "lng": 71.4267,
+        "address": "Салон красоты"
+      },
+      "trip_purpose": "личные дела",
+      "preferred_transport": "такси",
+      "estimated_duration": 17
+    },
+    {
+      "id": 16,
+      "name": "Николай Федоров",
+      "age": 48,
+      "current_location": {
+        "lat": 51.0812,
+        "lng": 71.4201,
+        "address": "Дачный участок"
+      },
+      "destination": {
+        "lat": 51.0978,
+        "lng": 71.4321,
+        "address": "Строительный магазин"
+      },
+      "trip_purpose": "хозяйственные нужды",
+      "preferred_transport": "грузовой автомобиль",
+      "estimated_duration": 26
+    },
+    {
+      "id": 17,
+      "name": "Мадина Жунусова",
+      "age": 34,
+      "current_location": {
+        "lat": 51.0888,
+        "lng": 71.4312,
+        "address": "Микрорайон Кокжон"
+      },
+      "destination": {
+        "lat": 51.0943,
+        "lng": 71.4115,
+        "address": "Поликлиника"
+      },
+      "trip_purpose": "медицина",
+      "preferred_transport": "такси",
+      "estimated_duration": 21
+    },
+    {
+      "id": 18,
+      "name": "Игорь Лебедев",
+      "age": 27,
+      "current_location": {
+        "lat": 51.0856,
+        "lng": 71.4045,
+        "address": "Общежитие работников"
+      },
+      "destination": {
+        "lat": 51.0812,
+        "lng": 71.4289,
+        "address": "Завод"
+      },
+      "trip_purpose": "работа",
+      "preferred_transport": "общественный транспорт",
+      "estimated_duration": 32
+    },
+    {
+      "id": 19,
+      "name": "Сауле Омарова",
+      "age": 41,
+      "current_location": {
+        "lat": 51.0945,
+        "lng": 71.4178,
+        "address": "Центральная площадь"
+      },
+      "destination": {
+        "lat": 51.0798,
+        "lng": 71.4103,
+        "address": "Культурный центр"
+      },
+      "trip_purpose": "культурные мероприятия",
+      "preferred_transport": "такси",
+      "estimated_duration": 18
+    },
+    {
+      "id": 20,
+      "name": "Виктор Степанов",
+      "age": 36,
+      "current_location": {
+        "lat": 51.0871,
+        "lng": 71.4238,
+        "address": "Автосервис"
+      },
+      "destination": {
+        "lat": 51.0923,
+        "lng": 71.4067,
+        "address": "Дом"
+      },
+      "trip_purpose": "возвращение домой",
+      "preferred_transport": "личный автомобиль",
+      "estimated_duration": 15
+    }
+  ]
+}

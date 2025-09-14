@@ -1,0 +1,143 @@
+{
+  "api_info": {
+    "base_url": "http://localhost:8001",
+    "version": "v2.1",
+    "docs_url": "http://localhost:8001/docs",
+    "description": "API с клиентской базой для предсказания районов + HINT система для водителей"
+  },
+  "endpoints": {
+    "root": {
+      "method": "GET",
+      "url": "/api/v1/",
+      "description": "API информация и список endpoints"
+    },
+    "predict": {
+      "method": "POST",
+      "url": "/api/v1/predict",
+      "description": "Предсказание районов назначения на основе клиентской базы",
+      "request_body": {
+        "start_lat": "float",
+        "start_lng": "float"
+      },
+      "example_request": {
+        "start_lat": 51.0845,
+        "start_lng": 71.4127
+      }
+    },
+    "predict_ml": {
+      "method": "POST",
+      "url": "/api/v1/predict/ml", 
+      "description": "Альтернативный endpoint: предсказание через ML модель"
+    },
+    "hint_heatmap": {
+      "method": "GET",
+      "url": "/api/v1/hint/heatmap",
+      "description": "🔥 НОВОЕ: HINT карта для водителей - где лучше ждать заказы",
+      "response_format": {
+        "hint_points": [
+          {
+            "area_name": "string (название района)",
+            "coordinates": {"lat": "float", "lng": "float"},
+            "order_probability": "float (вероятность заказа 0-1)",
+            "hint_score": "float (оценка 0-100)",
+            "recommendation": "string (рекомендация для водителя)",
+            "incoming_clients_count": "int (клиентов приезжает)"
+          }
+        ]
+      }
+    },
+    "hint_top": {
+      "method": "GET",
+      "url": "/api/v1/hint/top?limit=5",
+      "description": "🔥 НОВОЕ: Топ-5 лучших мест для ожидания заказов",
+      "query_params": {
+        "limit": "int (1-20, по умолчанию 5)"
+      }
+    },
+    "hint_check": {
+      "method": "POST",
+      "url": "/api/v1/hint/check",
+      "description": "🔥 НОВОЕ: Проверить конкретную точку для ожидания заказов",
+      "request_body": {
+        "lat": "float",
+        "lng": "float",
+        "radius_km": "float (0.1-5.0, по умолчанию 0.5)"
+      },
+      "example_request": {
+        "lat": 51.095,
+        "lng": 71.415,
+        "radius_km": 0.8
+      }
+    },
+    "chance": {
+      "method": "POST", 
+      "url": "/api/v1/chance",
+      "description": "Вероятность начала поездки в точке",
+      "request_body": {
+        "lat": "float",
+        "lng": "float"
+      }
+    },
+    "heatmap": {
+      "method": "GET",
+      "url": "/api/v1/heatmap",
+      "description": "Данные тепловой карты точек начала поездок"
+    },
+    "clusters": {
+      "method": "GET", 
+      "url": "/api/v1/clusters",
+      "description": "Информация о кластерах пунктов назначения"
+    },
+    "clients": {
+      "method": "GET",
+      "url": "/api/v1/clients", 
+      "description": "Список всех клиентов (база данных для предсказаний)"
+    },
+    "client_analysis": {
+      "method": "GET",
+      "url": "/api/v1/clients/{id}/analyze",
+      "description": "Комплексный анализ клиента с предсказаниями"
+    },
+    "clients_summary": {
+      "method": "GET",
+      "url": "/api/v1/clients/summary",
+      "description": "Сводная статистика по клиентам"
+    },
+    "model_info": {
+      "method": "GET",
+      "url": "/api/v1/model/info",
+      "description": "Информация о модели предсказания пунктов назначения"
+    },
+    "chance_info": {
+      "method": "GET", 
+      "url": "/api/v1/chance/info",
+      "description": "Информация о модели вероятности начала поездки"
+    }
+  },
+  "hint_system_features": {
+    "description": "HINT система анализирует куда едут клиенты и предсказывает где водителям лучше ждать новые заказы",
+    "logic": "Если клиент приезжает в район X, то в этом районе есть шанс что кто-то захочет уехать = потенциальный заказ",
+    "data_source": "Destination координаты из клиентской базы + Chance model для вероятностей",
+    "output": "Hint score (0-100) + рекомендации + количество приезжающих клиентов"
+  },
+  "testing_examples": {
+    "predict_areas": "curl -X POST 'http://localhost:8001/api/v1/predict' -H 'Content-Type: application/json' -d '{\"start_lat\": 51.0845, \"start_lng\": 71.4127}'",
+    "hint_heatmap": "curl 'http://localhost:8001/api/v1/hint/heatmap'",
+    "hint_top": "curl 'http://localhost:8001/api/v1/hint/top?limit=3'",
+    "hint_check": "curl -X POST 'http://localhost:8001/api/v1/hint/check' -H 'Content-Type: application/json' -d '{\"lat\": 51.095, \"lng\": 71.415, \"radius_km\": 0.8}'",
+    "check_chance": "curl -X POST 'http://localhost:8001/api/v1/chance' -H 'Content-Type: application/json' -d '{\"lat\": 51.0845, \"lng\": 71.4127}'",
+    "get_clients": "curl 'http://localhost:8001/api/v1/clients'"
+  },
+  "key_features": {
+    "destination_prediction": "Использует клиентскую базу вместо ML модели для предсказания районов",
+    "hint_system": "🔥 Новая система подсказок для водителей о лучших местах ожидания заказов",
+    "real_data": "Анализирует реальные поездки клиентов и их destinations",
+    "dual_models": "Destination prediction + Chance model для comprehensive анализа"
+  },
+  "frontend_integration": {
+    "heatmap_visualization": "Используйте /hint/heatmap для отображения карты с hint_score как интенсивность",
+    "top_locations_widget": "Используйте /hint/top для виджета 'Топ мест для водителей'",
+    "location_checker": "Используйте /hint/check для проверки конкретных точек при клике на карту",
+    "recommendation_display": "Показывайте recommendation текст пользователю с соответствующими эмодзи"
+  }
+}
