@@ -1,4 +1,4 @@
-# Decentra3 - Destination Prediction API
+# Decentra4 - Destination Prediction API
 
 FastAPI service for predicting taxi destinations with HINT system for driver guidance.
 
